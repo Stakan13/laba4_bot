@@ -1,13 +1,6 @@
-from sqlalchemy import Integer, String, Column
-from sqlalchemy.ext.declarative import declarative_base
+class Storage:
+    def __init__(self):
+        self.indexes = []
 
-
-Base = declarative_base()
-
-
-class Crypto(Base):
-
-    __tablename__ = 'crypto'
-
-    id = Column(Integer, primary_key=True, nullable=False)
-    name = Column(String(5), nullable=False)
+    def add_index(self, name):
+        self.indexes.append(name)

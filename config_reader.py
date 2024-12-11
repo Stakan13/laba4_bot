@@ -7,11 +7,7 @@ class Settings(BaseSettings):
     api_key: SecretStr
     indexes_url: SecretStr
     index_id: SecretStr
-    user: SecretStr
-    port: SecretStr
-    password: SecretStr
-    host: SecretStr
-    database: SecretStr
+    redis_url: SecretStr
     model_config = SettingsConfigDict(env_file=".env", env_file_encoding="UTF-8")
 
 
